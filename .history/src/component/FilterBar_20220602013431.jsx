@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, FormSelect } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
 
 
 const FilterBar = ({gender, filterName, filterEmail,filterGender,filterFrom,filterEnd}) => {
@@ -44,6 +44,7 @@ const FilterBar = ({gender, filterName, filterEmail,filterGender,filterFrom,filt
 
             default:
                 break;
+    
             }
         }
     
@@ -67,23 +68,22 @@ const FilterBar = ({gender, filterName, filterEmail,filterGender,filterFrom,filt
 
                 <Form.Group>
                     <Form.Label>Gender</Form.Label>
-                    <FormSelect defaultValue="Gender" onClick={filterHandle('gender')} >
-                        <option value="">Select</option>
+                    <Form.Select defaultValue="Gender">
                         {
                            gender.map((gender, index)=><option key={index} value={gender}>{gender}</option>)
                         }
-                    </FormSelect>
+                    </Form.Select>
                 </Form.Group>
                 <hr></hr>
                 
                 <Form.Group>
                     <Form.Label>Start Date</Form.Label>
-                    <input type="date" id="startDate" className="form-control" onChange={filterHandle("form")}/>
+                    <input type="date" id="startDate" className="form-control" onChange={filterHandle("name")}/>
                 </Form.Group>
                 
                 <Form.Group className="mt-3" controlId="formGroupPassword">
                     <Form.Label>End Date</Form.Label>
-                    <input type="date" className='form-control' id='endDate' onChange={filterHandle("form")}/>
+                    <input type="date" className='form-control' id='endDate'/>
                 </Form.Group>
 
                 </Form>

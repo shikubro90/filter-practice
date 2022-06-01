@@ -68,11 +68,10 @@ const FilterBar = ({gender, filterName, filterEmail,filterGender,filterFrom,filt
                 <Form.Group>
                     <Form.Label>Gender</Form.Label>
                     <FormSelect defaultValue="Gender" onClick={filterHandle('gender')} >
-                        <option value="">Select</option>
                         {
                            gender.map((gender, index)=><option key={index} value={gender}>{gender}</option>)
                         }
-                    </FormSelect>
+                    </Select>
                 </Form.Group>
                 <hr></hr>
                 

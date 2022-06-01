@@ -33,13 +33,11 @@ function App() {
 
   const filterGender=(gender)=>{
    const filterData = data.filter((item)=>{
-     if(item.gender.toLowerCase().includes(gender.toLowerCase())){
+     if(gender===item){
        return item
      }
    }) 
-
-   setAllData(filterData)
-
+   
   }
 
 

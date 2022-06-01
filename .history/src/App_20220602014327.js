@@ -31,16 +31,7 @@ function App() {
     setAllData(filterData)
   }
 
-  const filterGender=(gender)=>{
-   const filterData = data.filter((item)=>{
-     if(item.gender.toLowerCase().includes(gender.toLowerCase())){
-       return item
-     }
-   }) 
-
-   setAllData(filterData)
-
-  }
+  cont
 
 
   return (
@@ -52,7 +43,6 @@ function App() {
             gender={generateDataFromDropDown()} 
             filterName={filterName}
             filterEmail={filterEmail}
-            filterGender={filterGender}
             />
           </div>
           <div className='col-sm-9'>

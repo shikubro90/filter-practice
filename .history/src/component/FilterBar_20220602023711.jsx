@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, FormSelect } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
 
 
 const FilterBar = ({gender, filterName, filterEmail,filterGender,filterFrom,filterEnd}) => {
@@ -67,12 +67,11 @@ const FilterBar = ({gender, filterName, filterEmail,filterGender,filterFrom,filt
 
                 <Form.Group>
                     <Form.Label>Gender</Form.Label>
-                    <FormSelect defaultValue="Gender" onClick={filterHandle('gender')} >
-                        <option value="">Select</option>
+                    <Select defaultValue="Gender" onClick={filterHandle('gender')} >
                         {
                            gender.map((gender, index)=><option key={index} value={gender}>{gender}</option>)
                         }
-                    </FormSelect>
+                    </Select>
                 </Form.Group>
                 <hr></hr>
                 

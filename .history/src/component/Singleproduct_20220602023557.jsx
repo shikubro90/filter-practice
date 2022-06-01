@@ -13,7 +13,7 @@ const SingleProduct = ({item}) => {
                         `${item.email}
                         ${item.ip_address} 
                         ${item.date}
-                        ${item.gender}`
+                        `
                     }
                     </Card.Text>
                     <Button variant="primary">Go somewhere</Button>

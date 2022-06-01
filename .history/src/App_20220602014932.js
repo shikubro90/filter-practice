@@ -32,14 +32,7 @@ function App() {
   }
 
   const filterGender=(gender)=>{
-   const filterData = data.filter((item)=>{
-     if(item.gender.toLowerCase().includes(gender.toLowerCase())){
-       return item
-     }
-   }) 
-
-   setAllData(filterData)
-
+    console.log(generateDataFromDropDown)
   }
 
 
